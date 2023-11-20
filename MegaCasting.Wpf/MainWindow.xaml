@@ -5,9 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MegaCasting.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-			
+        Title="MainWindow" Height="450" Width="800"
+				ResizeMode="NoResize"
+				Background="Transparent"
+                AllowsTransparency="False"
+                WindowStyle="SingleBorderWindow"
+				>
+    <Border Background="#002855" CornerRadius="15">
+        <Grid ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="MegaCasting"
+                       Foreground="GhostWhite" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="20"
+                       
+                       />
 
-    </Grid>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Button Style="{StaticResource ButtonMenu}" Content="Offres"/>
+                <Button Style="{StaticResource ButtonMenu}" Content="Administration"/>
+                <Button Style="{StaticResource ButtonMenu}" Content="Partenaires"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
 </Window>
